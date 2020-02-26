@@ -8,15 +8,12 @@ const {
 
 const {
   each,
+  message,
   runWith,
 } = require('helpers')
 
 
 // Mocks
-
-const message = (send = () => {}) => ({
-	channel: { send },
-})
 
 const withStore = ({ save, load, remove }) => ({
 	store: {

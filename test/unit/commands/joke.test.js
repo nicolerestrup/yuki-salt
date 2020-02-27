@@ -2,6 +2,7 @@ const tap = require('tap')
 
 const {
 	each,
+	message,
 	runWith,
 } = require('helpers')
 
@@ -9,12 +10,6 @@ const { factory } = require('commands/joke')
 
 
 // Mocks
-
-const message = (send = () => {}) => ({
-	channel: {
-		send,
-	},
-})
 
 const DEFAULT_JOKE = {
 	id: '123',

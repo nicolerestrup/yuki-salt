@@ -11,7 +11,7 @@ const makeDescription = (text, args) => {
 	return values.reduce((prev, v) => prev.replace('{}', v), text)
 }
 
-module.exports.message = send => ({
+module.exports.message = (send = () => {}) => ({
 	channel: { send },
 })
 
